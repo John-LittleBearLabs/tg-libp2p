@@ -1,13 +1,6 @@
-module github.com/libp2p/test-plans/ping/go
+module github.com/John-LittleBearLabs/test-plans/ping/go
 
-replace github.com/libp2p/go-libp2p => github.com/John-LittleBearLabs/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
-replace github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
-
-require github.com/libp2p/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
-require github.com/libp2p/p2p/protocol/webrtc v0.20.1-0.20220912122030-f3d33ac19a8a
-
-replace github.com/libp2p/go-libp2p => github.com/John-LittleBearLabs/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
-replace github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
+require github.com/John-LittleBearLabs/go-libp2p v1.8.7
 
 go 1.18
 
@@ -98,7 +91,6 @@ require (
 	github.com/pion/transport v0.13.1 // indirect
 	github.com/pion/turn/v2 v2.0.8 // indirect
 	github.com/pion/udp v0.1.1 // indirect
-	github.com/pion/webrtc/v3 v3.1.43 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.13.0 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
