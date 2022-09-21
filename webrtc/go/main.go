@@ -10,7 +10,7 @@ import (
 
 // 	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
 	libp2p "github.com/John-LittleBearLabs/go-libp2p"
-	webrtc "github.com/John-LittleBearLabs/p2p/transport/webrtc"
+	webrtc "github.com/John-LittleBearLabs/go-libp2p/p2p/transport/webrtc"
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"
