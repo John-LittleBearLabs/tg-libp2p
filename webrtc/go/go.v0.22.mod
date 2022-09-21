@@ -1,13 +1,13 @@
 module github.com/libp2p/test-plans/ping/go
 
 replace github.com/libp2p/go-libp2p => github.com/John-LittleBearLabs/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
-replace github.com/libp2p/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
+replace github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
 
 require github.com/libp2p/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
 require github.com/libp2p/p2p/protocol/webrtc v0.20.1-0.20220912122030-f3d33ac19a8a
 
 replace github.com/libp2p/go-libp2p => github.com/John-LittleBearLabs/go-libp2p v0.20.1-0.20220912122030-f3d33ac19a8a
-replace github.com/libp2p/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
+replace github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc => github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc  v0.20.1-0.20220912122030-f3d33ac19a8a
 
 go 1.18
 

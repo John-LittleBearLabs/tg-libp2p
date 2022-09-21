@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/libp2p/go-libp2p/p2p/protocol/webrtc"
+	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/webrtc"
 
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
