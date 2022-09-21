@@ -10,6 +10,7 @@ import (
 
 // 	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
 	libp2p "github.com/John-LittleBearLabs/go-libp2p"
+	webrtc "github.com/John-LittleBearLabs/p2p/transport/webrtc"
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"
@@ -124,9 +125,9 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 
 	// 🚧  Now we instantiate the webrtc service.
 	//
-	// This adds a stream handler to our Host so it can process inbound webrtcs,
-	// and the returned WebrtcService instance allows us to perform outbound webrtcs.
-	webrtc := webrtc.NewWebrtcService(host)
+	// This adds a stream handler to our Host so it can process inbound pings,
+	// and the returned WebrtcService instance allows us to perform outbound pings.
+	ping := ping.NewPingService(host)
 
 	// Record our listen addrs.
 	runenv.RecordMessage("my listen addrs: %v", host.Addrs())
