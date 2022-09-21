@@ -36,7 +36,7 @@
       selectors = ['{{ .Selector }}']
 
       [[groups.build.dependencies]]
-        module = "github.com/libp2p/go-libp2p"
+        module = "github.com/John-LittleBearLabs/go-libp2p"
         version = "master"
 
     [groups.build_config]
@@ -62,7 +62,7 @@
         selectors = ['{{ .Selector }}']
 
       [[groups.build.dependencies]]
-        module = "github.com/libp2p/go-libp2p"
+        module = "github.com/John-LittleBearLabs/go-libp2p"
         version = "{{ $.Env.GitReference }}"
         {{ if $.Env.GitTarget }}
         target = "{{ $.Env.GitTarget }}"

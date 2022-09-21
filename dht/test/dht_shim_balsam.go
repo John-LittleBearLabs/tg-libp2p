@@ -7,7 +7,7 @@ import (
 	"github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-ipns"
 	"github.com/testground/sdk-go/runtime"
-	"github.com/libp2p/go-libp2p"
+	"github.com/John-LittleBearLabs/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/peer"
 	kaddht "github.com/libp2p/go-libp2p-kad-dht"
