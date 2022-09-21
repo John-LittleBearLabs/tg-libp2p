@@ -3,7 +3,7 @@ module github.com/libp2p/test-plans/ping/go
 go 1.18
 
 require (
-	github.com/libp2p/go-libp2p v0.21.0
+	github.com/John-LittleBearLabs/go-libp2p v0.21.0
 	github.com/libp2p/go-libp2p-core v0.19.1
 	github.com/libp2p/go-libp2p-noise v0.5.0
 	github.com/libp2p/go-libp2p-tls v0.5.0

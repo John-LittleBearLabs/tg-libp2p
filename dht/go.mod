@@ -9,7 +9,7 @@ require (
 	github.com/ipfs/go-ds-leveldb v0.4.1
 	github.com/ipfs/go-ipfs-util v0.0.1
 	github.com/ipfs/go-ipns v0.0.2
-	github.com/libp2p/go-libp2p v0.4.2
+	github.com/John-LittleBearLabs/go-libp2p v0.4.2
 	github.com/libp2p/go-libp2p-connmgr v0.2.1
 	github.com/libp2p/go-libp2p-core v0.3.0
 	github.com/libp2p/go-libp2p-kad-dht v0.4.1
@@ -34,5 +34,5 @@ require (
 //replace github.com/libp2p/go-libp2p-autonat-svc => github.com/libp2p/go-libp2p-autonat-svc v0.1.1-0.20200310185508-f21360000124
 //replace github.com/libp2p/go-libp2p-kad-dht => ../../../../libp2p/go-libp2p-kad-dht
 //replace github.com/libp2p/go-libp2p-kad-dht => github.com/libp2p/go-libp2p-kad-dht v0.5.2-0.20200310202241-7ada018b2a13
-//replace github.com/libp2p/go-libp2p => github.com/libp2p/go-libp2p v0.6.1-0.20200310185355-89c193e0ca37
+//replace github.com/John-LittleBearLabs/go-libp2p => github.com/libp2p/go-libp2p v0.6.1-0.20200310185355-89c193e0ca37
 //replace github.com/libp2p/go-libp2p-core => github.com/libp2p/go-libp2p-core v0.5.0
