@@ -8,8 +8,8 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
-
+// 	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
+	libp2p "github.com/John-LittleBearLabs/go-libp2p"
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"
