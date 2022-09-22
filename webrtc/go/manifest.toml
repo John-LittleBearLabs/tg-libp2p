@@ -1,4 +1,4 @@
-name = "webrtc:interop:go"
+name = "webrtc:go"
 
 [builders]
 "exec:go"   = { enabled = true }
@@ -13,7 +13,7 @@ build_base_image       = "golang:1.19-bullseye"
 "cluster:k8s"   = { enabled = true }
 
 [[testcases]]
-name = "interop"
+name = "ping"
 instances = { min = 2, max = 10000, default = 5 }
 
   [testcases.params]
