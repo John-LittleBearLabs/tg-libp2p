@@ -20,7 +20,7 @@
   builder = "docker:go" # override builder here
 
   [groups.build_config]
-    path = "go/" # define base path here
+    path = "./"
     build_args = { image = "golang:1.19-bullseye" }
 
   [groups.run.test_params]
@@ -28,6 +28,7 @@
 
   [groups.build_config.dockerfile_extensions]
     pre_build = "RUN echo client prebuild"
+    pre_mod_download = "RUN echo about to moddown && find /plan/
 
 [[groups]]
   id = "client"
@@ -35,7 +36,7 @@
   builder = "docker:go" # override builder here
 
   [groups.build_config]
-    path = "go/" # define base path here
+    path = "./"
     build_args = { image = "golang:1.19-bullseye" }
 
   [groups.run.test_params]
@@ -43,6 +44,7 @@
 
   [groups.build_config.dockerfile_extensions]
     pre_build = "RUN echo client prebuild"
+    pre_mod_download = "RUN echo about to moddown && find /plan/
 
 #{{ with (load_resource "./go.toml" ) }}
   #{{ range .groups }}
