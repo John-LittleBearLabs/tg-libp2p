@@ -3,7 +3,7 @@ GoVersion = '1.18'
 Modfile = "go.mod"
 Selector = 'master'
 
-[v1.2.6]
+[custom]
 GoVersion = '1.18'
 Modfile = "go.mod"
 Selector = 'v1.2.6'
