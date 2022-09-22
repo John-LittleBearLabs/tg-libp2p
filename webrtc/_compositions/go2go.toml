@@ -26,6 +26,9 @@
   [groups.run.test_params]
     expected_implementation = "go"
 
+  [groups.build_config.dockerfile_extensions]
+    pre_build = "RUN echo client prebuild"
+
 [[groups]]
   id = "client"
   instances = { count = 1 }
@@ -37,6 +40,9 @@
 
   [groups.run.test_params]
     expected_implementation = "go"
+
+  [groups.build_config.dockerfile_extensions]
+    pre_build = "RUN echo client prebuild"
 
 #{{ with (load_resource "./go.toml" ) }}
   #{{ range .groups }}
