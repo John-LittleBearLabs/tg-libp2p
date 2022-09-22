@@ -35,9 +35,6 @@
     [groups.build]
       selectors = ['{{ .Selector }}']
 
-      [[groups.build.dependencies]]
-        module = "github.com/John-LittleBearLabs/go-libp2p"
-        version = "master"
 
     [groups.build_config]
       build_base_image = 'golang:{{ .GoVersion }}-buster'
@@ -61,12 +58,6 @@
       [groups.build]
         selectors = ['{{ .Selector }}']
 
-      [[groups.build.dependencies]]
-        module = "github.com/John-LittleBearLabs/go-libp2p"
-        version = "{{ $.Env.GitReference }}"
-        {{ if $.Env.GitTarget }}
-        target = "{{ $.Env.GitTarget }}"
-        {{ end }}
 
       [groups.build_config]
         build_base_image = 'golang:{{ .GoVersion }}-buster'
