@@ -1,4 +1,4 @@
-name = "compatibility-rust-and-go"
+name = "webrtc-ping"
 
 [defaults]
 builder = "docker:generic"
@@ -14,8 +14,8 @@ enabled = true
 enabled = true
 
 [[testcases]]
-name = "ping"
-instances = { min = 2, max = 10000, default = 5 }
+name = "webrtc"
+instances = { min = 1, max = 10000, default = 2 }
 
   [testcases.params]
   secure_channel    = { type = "enum", desc = "secure channel used", values = ["noise"], default = "noise" }
