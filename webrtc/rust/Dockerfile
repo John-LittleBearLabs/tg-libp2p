@@ -11,9 +11,11 @@ RUN echo "fn main() { println!(\"If you see this message, you may want to clean 
 COPY ./plan/${PLAN_PATH}/Cargo.lock ./plan/${PLAN_PATH}/Cargo.toml ./plan/
 
 RUN cd ./plan/ && \
-        cargo update --dry-run && \
-        cargo fetch && \
-        # use a default feature to rely on docker caching.
+        cargo update --dry-run &&
+RUN cd ./plan/ && \
+        cargo fetch &&
+# use a default feature to rely on docker caching.
+RUN cd ./plan/ && \
         cargo build --release --features "libp2pv0450"
 
 ARG CARGO_PATCH=""
