@@ -22,6 +22,7 @@
   [groups.build_config]
     path = "./go"
     build_args = { image = "golang:1.19-bullseye" }
+    modfile = "go.orig.mod"
 
   [groups.run.test_params]
     expected_implementation = "go"
@@ -38,6 +39,7 @@
   [groups.build_config]
     path = "./go"
     build_args = { image = "golang:1.19-bullseye" }
+    modfile = "go.orig.mod"
 
   [groups.run.test_params]
     expected_implementation = "go"
