@@ -1,9 +1,9 @@
-[master]
+[v1.2.6]
 GoVersion = '1.18'
 Modfile = "go.mod"
-Selector = 'A'
+Selector = 'v1.2.6'
 
-[B]
+[v1.2.5]
 GoVersion = '1.18'
 Modfile = "go.mod"
-Selector = 'B'
+Selector = 'v1.2.6'
