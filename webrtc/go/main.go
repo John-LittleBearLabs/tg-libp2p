@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-// 	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
+	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
 	libp2p "github.com/John-LittleBearLabs/go-libp2p"
 	webrtc "github.com/John-LittleBearLabs/go-libp2p/p2p/transport/webrtc"
 	"github.com/testground/sdk-go/network"
@@ -184,7 +184,7 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 				// a context for the continuous stream of webrtcs.
 				pctx, cancel := context.WithCancel(gctx)
 				defer cancel()
-				res := <-webrtc.Webrtc(pctx, id)
+				res := <- ping.Ping(pctx, id)
 				if res.Error != nil {
 					return res.Error
 				}
