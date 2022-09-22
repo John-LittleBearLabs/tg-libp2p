@@ -28,7 +28,7 @@
 
   [groups.build_config.dockerfile_extensions]
     pre_build = "RUN echo client prebuild"
-    pre_mod_download = "RUN echo server about to moddown ${PLAN_PATH} ${PLAN_DIR} ; mkdir -p ${PLAN_DIR} ${PLAN_PATH} ; find / -type d | grep plan ; ls -lrth / "
+    pre_mod_download = "RUN echo server about to moddown ${PLAN_PATH} ${PLAN_DIR} ; mkdir -p ${PLAN_DIR} ${PLAN_PATH} ; find / -type f -name go.mod"
 
 [[groups]]
   id = "client"
@@ -44,7 +44,7 @@
 
   [groups.build_config.dockerfile_extensions]
     pre_build = "RUN echo client prebuild"
-    pre_mod_download = "RUN echo client about to moddown ${PLAN_PATH} ${PLAN_DIR} ; mkdir -p ${PLAN_DIR} ${PLAN_PATH} ; find / -type d | grep plan ; ls -lrth / "
+    pre_mod_download = "RUN echo client about to moddown ${PLAN_PATH} ${PLAN_DIR} ; mkdir -p ${PLAN_DIR} ${PLAN_PATH} ; find / -type f -name go.mod"
 
 #{{ with (load_resource "./go.toml" ) }}
   #{{ range .groups }}
