@@ -2,8 +2,8 @@
   name = "go-cross-versions {{ .Env.GitReference }}"
 
 [global]
-  plan = "libp2p/ping/go"
-  case = "ping"
+  plan = "libp2p/webrtc/go"
+  case = "webrtc"
   builder = "docker:go"
   runner = "local:docker"
 
