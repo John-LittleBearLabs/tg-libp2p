@@ -11,8 +11,8 @@
   [global.build_config]
     enable_go_build_cache  = true # TODO set back to false, see https://github.com/testground/testground/issues/1361
     # TODO restore disable testground's goproxy which hangs on github runners.
-    #go_proxy_mode          = "remote"
-    #go_proxy_url           = "https://proxy.golang.org"
+    go_proxy_mode          = "remote"
+    go_proxy_url           = "https://proxy.golang.org"
 
 [[groups]]
   id = "server"
