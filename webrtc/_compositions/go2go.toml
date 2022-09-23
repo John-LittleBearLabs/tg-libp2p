@@ -13,6 +13,8 @@
     # TODO restore disable testground's goproxy which hangs on github runners.
     #go_proxy_mode          = "remote"
     #go_proxy_url           = "https://proxy.golang.org"
+    go_proxy_mode          = "direct"
+    go_proxy_url           = "https://goproxy.io"
 
 [[groups]]
   id = "server"
