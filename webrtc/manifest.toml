@@ -15,7 +15,7 @@ enabled = true
 
 [[testcases]]
 name = "webrtc"
-instances = { min = 1, max = 10000, default = 2 }
+instances = { min = 1, max = 10000, default = 1 }
 
   [testcases.params]
   secure_channel    = { type = "enum", desc = "secure channel used", values = ["noise"], default = "noise" }
