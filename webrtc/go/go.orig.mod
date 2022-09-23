@@ -1,11 +1,11 @@
 module github.com/John-LittleBearLabs/tg-libp2p/webrtc/go
 
 require github.com/John-LittleBearLabs/go-libp2p v1.2.5
-require github.com/John-LittleBearLabs/tg-libp2p/webrtc/go/compat v1.0.2
-require github.com/prometheus/client_golang/prometheus v1.13.0
+
 require github.com/minio/sha256-simd v1.0.0
 
 require (
+	github.com/John-LittleBearLabs/tg-libp2p v1.0.2 // indirect
 	github.com/avast/retry-go v2.6.0+incompatible // indirect
 	github.com/benbjohnson/clock v1.3.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -44,6 +44,9 @@ require (
 	github.com/libp2p/go-flow-metrics v0.1.0 // indirect
 	github.com/libp2p/go-libp2p v0.22.0 // indirect
 	github.com/libp2p/go-libp2p-asn-util v0.2.0 // indirect
+	github.com/libp2p/go-libp2p-core v0.20.1 // indirect
+	github.com/libp2p/go-libp2p-noise v0.5.0 // indirect
+	github.com/libp2p/go-libp2p-tls v0.5.0 // indirect
 	github.com/libp2p/go-msgio v0.2.0 // indirect
 	github.com/libp2p/go-nat v0.1.0 // indirect
 	github.com/libp2p/go-netroute v0.2.0 // indirect
@@ -60,7 +63,6 @@ require (
 	github.com/miekg/dns v1.1.50 // indirect
 	github.com/mikioh/tcpinfo v0.0.0-20190314235526-30a79bb1804b // indirect
 	github.com/mikioh/tcpopt v0.0.0-20190314235656-172688c1accc // indirect
-	github.com/minio/sha256-simd v1.0.0 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/multiformats/go-base32 v0.1.0 // indirect
 	github.com/multiformats/go-base36 v0.1.0 // indirect
