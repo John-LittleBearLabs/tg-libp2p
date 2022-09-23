@@ -31,7 +31,7 @@
     expected_implementation = "go"
 
   [groups.build_config.dockerfile_extensions]
-    pre_build = "RUN echo client prebuild"
+    pre_build = "RUN echo server prebuild"
     pre_mod_download = "RUN echo server about to moddown ${PLAN_PATH} ${PLAN_DIR} ; mkdir -p ${PLAN_DIR} ${PLAN_PATH} ; find / -type f -name go.mod"
 
 [[groups]]

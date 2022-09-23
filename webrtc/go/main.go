@@ -16,7 +16,7 @@ import (
 	"github.com/testground/sdk-go/runtime"
 	"github.com/testground/sdk-go/sync"
 
- 	compat "github.com/John-LittleBearLabs/test-plans/ping/go/compat"
+ 	compat "github.com/John-LittleBearLabs/tg-libp2p/webrtc/go/compat"
 )
 
 var testcases = map[string]interface{}{
