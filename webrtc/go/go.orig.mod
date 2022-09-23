@@ -2,8 +2,8 @@ module github.com/John-LittleBearLabs/tg-libp2p/webrtc/go
 
 require github.com/John-LittleBearLabs/go-libp2p v1.2.5
 require github.com/John-LittleBearLabs/tg-libp2p/webrtc/go/compat v1.0.2
-require github.com/prometheus/client_golang/prometheus@v1.13.0
-require github.com/minio/sha256-simd@v1.0.0
+require github.com/prometheus/client_golang/prometheus v1.13.0
+require github.com/minio/sha256-simd v1.0.0
 
 require (
 	github.com/avast/retry-go v2.6.0+incompatible // indirect
