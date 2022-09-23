@@ -1,7 +1,7 @@
 module github.com/John-LittleBearLabs/tg-libp2p/webrtc/go
 
 require (
-	github.com/John-LittleBearLabs/go-libp2p v1.0.2
+	github.com/John-LittleBearLabs/go-libp2p v1.0.4
 	github.com/libp2p/test-plans v0.0.0-20220923094226-1b981a33e095
 	github.com/testground/sdk-go v0.3.0
 	golang.org/x/sync v0.0.0-20220819030929-7fc1605a5dde
@@ -64,6 +64,7 @@ require (
 	github.com/miekg/dns v1.1.50 // indirect
 	github.com/mikioh/tcpinfo v0.0.0-20190314235526-30a79bb1804b // indirect
 	github.com/mikioh/tcpopt v0.0.0-20190314235656-172688c1accc // indirect
+	github.com/minio/sha256-simd v1.0.0 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/multiformats/go-base32 v0.1.0 // indirect
 	github.com/multiformats/go-base36 v0.1.0 // indirect
