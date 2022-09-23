@@ -1,7 +1,5 @@
 module github.com/John-LittleBearLabs/tg-libp2p/webrtc/go
 
-require github.com/John-LittleBearLabs/go-libp2p v1.2.5
-
 require github.com/minio/sha256-simd v1.0.0
 
 require (
