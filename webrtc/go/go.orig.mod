@@ -1,7 +1,8 @@
 module github.com/libp2p/tg-libp2p/webrtc/go
 
 require (
-	github.com/John-LittleBearLabs/tg-libp2p v1.0.2
+	github.com/John-LittleBearLabs/tg-libp2p v1.0.4
+	github.com/John-LittleBearLabs/tg-libp2p/webrtc/go/compat v1.0.4
 	github.com/libp2p/go-libp2p v1.0.4
 	github.com/testground/sdk-go v0.3.0
 	golang.org/x/sync v0.0.0-20220819030929-7fc1605a5dde
@@ -108,5 +109,6 @@ require (
 )
 
 go 1.19
-
 replace github.com/libp2p/go-libp2p => /go-libp2p
+replace github.com/libp2p/go-libp2p/webrtc/go/compat => /go-libp2p/webrtc/go/compat
+
