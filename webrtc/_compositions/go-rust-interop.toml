@@ -41,7 +41,7 @@
         selectors = ['{{ .Selector }}']
 
       [[groups.build.dependencies]]
-        module = "github.com/John-LittleBearLabs/go-libp2p"
+        module = "github.com/libp2p/go-libp2p"
         version = "{{ $.Env.GitReference }}"
         {{ if $.Env.GitTarget }}
         target = "{{ $.Env.GitTarget }}"
@@ -56,7 +56,7 @@
         # deal with dependency changes in master until we create the new vx.y.z instance
         pre_build = """
           RUN cd ${PLAN_DIR} && \
-              go mod download github.com/John-LittleBearLabs/go-libp2p && \
+              go mod download github.com/libp2p/go-libp2p && \
               go mod tidy -compat={{ .GoVersion }}
           """
   {{ end }}

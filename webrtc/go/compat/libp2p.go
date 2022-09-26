@@ -7,13 +7,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/John-LittleBearLabs/go-libp2p"
-	"github.com/John-LittleBearLabs/go-libp2p/config"
-	"github.com/John-LittleBearLabs/go-libp2p/core/host"
-	"github.com/John-LittleBearLabs/go-libp2p/core/peer"
+	"github.com/libp2p/go-libp2p"
+	"github.com/libp2p/go-libp2p/config"
+	"github.com/libp2p/go-libp2p/core/host"
+	"github.com/libp2p/go-libp2p/core/peer"
 
-	noise "github.com/John-LittleBearLabs/go-libp2p/p2p/security/noise"
-	tls "github.com/John-LittleBearLabs/go-libp2p/p2p/security/tls"
+	noise "github.com/libp2p/go-libp2p/p2p/security/noise"
+	tls "github.com/libp2p/go-libp2p/p2p/security/tls"
 )
 
 type PeerAddrInfo = peer.AddrInfo

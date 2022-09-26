@@ -8,9 +8,9 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/John-LittleBearLabs/go-libp2p/p2p/protocol/ping"
-	libp2p "github.com/John-LittleBearLabs/go-libp2p"
-// 	webrtc "github.com/John-LittleBearLabs/go-libp2p/p2p/transport/webrtc"
+	"github.com/libp2p/go-libp2p/p2p/protocol/ping"
+	libp2p "github.com/libp2p/go-libp2p"
+// 	webrtc "github.com/libp2p/go-libp2p/p2p/transport/webrtc"
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"

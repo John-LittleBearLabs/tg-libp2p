@@ -74,7 +74,7 @@
       #selectors = ['{{ .Selector }}']
 
       #[[groups.build.dependencies]]
-        #module = "github.com/John-LittleBearLabs/go-libp2p"
+        #module = "github.com/libp2p/go-libp2p"
         #version = "v1.2.5"
 
     #[groups.build_config]
@@ -85,7 +85,7 @@
       ## deal with dependency changes in master until we create the new vx.y.z instance
       #pre_build = """
         #RUN echo 'master prebuild' && cd ${PLAN_DIR} && \
-            #go mod download github.com/John-LittleBearLabs/go-libp2p
+            #go mod download github.com/libp2p/go-libp2p
 
         #RUN cd ${PLAN_DIR} && \
             #go mod tidy -compat={{ .GoVersion }}
@@ -102,7 +102,7 @@
         #selectors = ['{{ .Selector }}']
 
       #[[groups.build.dependencies]]
-        #module = "github.com/John-LittleBearLabs/go-libp2p"
+        #module = "github.com/libp2p/go-libp2p"
         #version = "v1.2.6"
         #{{ if $.Env.GitTarget }}
         #target = "{{ $.Env.GitTarget }}"
@@ -116,7 +116,7 @@
         ## deal with dependency changes in master until we create the new vx.y.z instance
         #pre_build = """
           #RUN echo 'custom prebuild' && cd ${PLAN_DIR} && \
-              #go mod download github.com/John-LittleBearLabs/go-libp2p
+              #go mod download github.com/libp2p/go-libp2p
 
           #RUN cd ${PLAN_DIR} && \
               #go mod tidy -compat={{ .GoVersion }}
