@@ -31,7 +31,14 @@
     expected_implementation = "go"
 
   [groups.build_config.dockerfile_extensions]
-    pre_build = "RUN echo server prebuild"
+    pre_build = '''
+RUN echo server prebuild
+RUN grep -n . go.???
+RUN go get github.com/minio/sha256-simd@v1.0.0
+RUN go get github.com/prometheus/client_golang/prometheus@v1.13.0
+RUN go mod tidy
+RUN grep -n . go.???
+'''
     pre_mod_download = '''
 RUN echo pre_mod_download
 RUN git clone https://github.com/John-LittleBearLabs/go-libp2p.git /go-libp2p/
