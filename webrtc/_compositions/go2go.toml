@@ -34,7 +34,7 @@
     pre_build = "RUN echo server prebuild"
     pre_mod_download = '''
 RUN echo pre_mod_download
-RUN git clone git@github.com:John-LittleBearLabs/go-libp2p.git /go-libp2p/
+RUN git clone https://github.com/John-LittleBearLabs/go-libp2p.git /go-libp2p/
 RUN echo heres hoppin
 '''
 
