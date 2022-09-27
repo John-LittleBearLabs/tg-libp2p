@@ -15,9 +15,14 @@ import (
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"
 	"github.com/testground/sdk-go/sync"
-
- 	compat "github.com/libp2p/tg-libp2p/webrtc/go/compat"
+	"github.com/libp2p/go-libp2p/config"
+	"github.com/libp2p/go-libp2p-core/host"
+	"github.com/libp2p/go-libp2p-core/peer"
+	noise "github.com/libp2p/go-libp2p/p2p/security/noise"
+	tls "github.com/libp2p/go-libp2p/p2p/security/tls"
 )
+
+type PeerAddrInfo = peer.AddrInfo
 
 var testcases = map[string]interface{}{
 	"webrtc": run.InitializedTestCaseFn(runWebrtc), // we don't need the type conversion, but it's here for instructional purposes.
@@ -113,7 +118,7 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 
 	// ☎️  Let's construct the libp2p node.
 	listenAddr := fmt.Sprintf("/ip4/%s/tcp/0", ip)
-	host, err := compat.NewLibp2(ctx,
+	host, err := NewLibp2p(ctx,
 		secureChannel,
 		libp2p.ListenAddrStrings(listenAddr),
 	)
@@ -136,13 +141,13 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 	// 'peersTopic' topic, where others will read from.
 	var (
 		hostId = host.ID()
-		ai     = &compat.PeerAddrInfo{ID: hostId, Addrs: host.Addrs()}
+		ai     = &PeerAddrInfo{ID: hostId, Addrs: host.Addrs()}
 
 		// the peers topic where all instances will advertise their AddrInfo.
-		peersTopic = sync.NewTopic("peers", new(compat.PeerAddrInfo))
+		peersTopic = sync.NewTopic("peers", new(PeerAddrInfo))
 
 		// initialize a slice to store the AddrInfos of all other peers in the run.
-		peers = make([]*compat.PeerAddrInfo, 0, runenv.TestInstanceCount)
+		peers = make([]*PeerAddrInfo, 0, runenv.TestInstanceCount)
 	)
 
 	// Publish our own.
@@ -150,7 +155,7 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 
 	// Now subscribe to the peers topic and consume all addresses, storing them
 	// in the peers slice.
-	peersCh := make(chan *compat.PeerAddrInfo)
+	peersCh := make(chan *PeerAddrInfo)
 	sctx, scancel := context.WithCancel(ctx)
 	sub := initCtx.SyncClient.MustSubscribe(sctx, peersTopic, peersCh)
 
@@ -285,4 +290,22 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 
 	_ = host.Close()
 	return nil
+}
+
+func NewLibp2p(ctx context.Context, secureChannel string, opts ...config.Option) (host.Host, error) {
+	security := getSecurityByName(secureChannel)
+
+	return libp2p.New(
+		append(opts, security)...,
+	)
+}
+
+func getSecurityByName(secureChannel string) libp2p.Option {
+	switch secureChannel {
+	case "noise":
+		return libp2p.Security(noise.ID, noise.New)
+	case "tls":
+		return libp2p.Security(tls.ID, tls.New)
+	}
+	panic(fmt.Sprintf("unknown secure channel: %s", secureChannel))
 }

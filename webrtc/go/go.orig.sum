@@ -43,10 +43,6 @@ github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78/go.mod h1:LmzpDX
 github.com/Azure/go-autorest v11.1.2+incompatible/go.mod h1:r+4oMnoxhatjLLJ6zxSWATqVooLgysK6ZNox3g/xq24=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/John-LittleBearLabs/go-libp2p v1.8.7 h1:BiufLyjjgWMzL5PdqPpsLVtLX9f45Fq3j6Neeub/lzs=
-github.com/John-LittleBearLabs/go-libp2p v1.8.7/go.mod h1:EPQdlzF4R7YLr9AUXWbzI+WaA/UdbuL37a/LxXWRBpo=
-github.com/John-LittleBearLabs/tg-libp2p v1.0.2 h1:4qn9Q94aqvfGS1XWni3WRkV/nRSSco2O5vF9A86YiQU=
-github.com/John-LittleBearLabs/tg-libp2p v1.0.2/go.mod h1:rR30nSMVuR8OnQsYurC1DIhlphWBOOnKzTxCIrF1ab8=
 github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5/go.mod h1:tTuCMEN+UleMWgg9dVx4Hu52b1bJo+59jBh3ajtinzw=
 github.com/Microsoft/hcsshim v0.8.7/go.mod h1:OHd7sQqRFrYd3RmSgbgji+ctCwkbq2wbEYNSzOYtcBQ=
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=
@@ -380,11 +376,7 @@ github.com/libp2p/go-libp2p-asn-util v0.2.0 h1:rg3+Os8jbnO5DxkC7K/Utdi+DkY3q/d1/
 github.com/libp2p/go-libp2p-asn-util v0.2.0/go.mod h1:WoaWxbHKBymSN41hWSq/lGKJEca7TNm58+gGJi2WsLI=
 github.com/libp2p/go-libp2p-core v0.20.1 h1:fQz4BJyIFmSZAiTbKV8qoYhEH5Dtv/cVhZbG3Ib/+Cw=
 github.com/libp2p/go-libp2p-core v0.20.1/go.mod h1:6zR8H7CvQWgYLsbG4on6oLNSGcyKaYFSEYyDt51+bIY=
-github.com/libp2p/go-libp2p-noise v0.5.0 h1:gwJZ/3iH3MRnBrLIyr/YLdCOnmqfJMptlsFFUIc3j0Y=
-github.com/libp2p/go-libp2p-noise v0.5.0/go.mod h1:CYYpJ+T4pox1d1J/hhUVxuMf6b2s3c41hFUgS8/yFQw=
 github.com/libp2p/go-libp2p-testing v0.12.0 h1:EPvBb4kKMWO29qP4mZGyhVzUyR25dvfUIK5WDu6iPUA=
-github.com/libp2p/go-libp2p-tls v0.5.0 h1:aRNTeOI8Ljm1r4L2uMGxkMsVnyZoPwaqQqMw23qAsQs=
-github.com/libp2p/go-libp2p-tls v0.5.0/go.mod h1:1a4tq0xQSZ0kAkDkZVAppuP3SAIUHcnzi2djJ/2EN4I=
 github.com/libp2p/go-msgio v0.2.0 h1:W6shmB+FeynDrUVl2dgFQvzfBZcXiyqY4VmpQLu9FqU=
 github.com/libp2p/go-msgio v0.2.0/go.mod h1:dBVM1gW3Jk9XqHkU4eKdGvVHdLa51hoGfll6jMJMSlY=
 github.com/libp2p/go-nat v0.1.0 h1:MfVsH6DLcpa04Xr+p8hmVRG4juse0s3J8HyNWYHffXg=
