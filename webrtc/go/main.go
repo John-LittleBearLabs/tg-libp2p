@@ -10,7 +10,7 @@ import (
 
 	"github.com/libp2p/go-libp2p/p2p/protocol/ping"
 	libp2p "github.com/libp2p/go-libp2p"
-// 	webrtc "github.com/libp2p/go-libp2p/p2p/transport/webrtc"
+	webrtc "github.com/libp2p/go-libp2p/p2p/transport/webrtc"
 	"github.com/testground/sdk-go/network"
 	"github.com/testground/sdk-go/run"
 	"github.com/testground/sdk-go/runtime"
@@ -117,9 +117,10 @@ func runWebrtc(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 	ip := initCtx.NetClient.MustGetDataNetworkIP()
 
 	// ☎️  Let's construct the libp2p node.
-	listenAddr := fmt.Sprintf("/ip4/%s/tcp/0", ip)
+	listenAddr := fmt.Sprintf("/ip4/%s/udp/0/webrtc", ip)
 	host, err := NewLibp2p(ctx,
 		secureChannel,
+		libp2p.Transport(webrtc.New),
 		libp2p.ListenAddrStrings(listenAddr),
 	)
 
