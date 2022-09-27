@@ -39,7 +39,7 @@ RUN cd ${PLAN_DIR} && go get github.com/minio/sha256-simd@v1.0.0
 RUN cd ${PLAN_DIR} && go get github.com/prometheus/client_golang/prometheus@v1.13.0
 RUN cd ${PLAN_DIR} && go mod tidy
 RUN cd ${PLAN_DIR} && grep -n . go.???
-go version
+RUN go version
 '''
     pre_mod_download = '''
 RUN echo pre_mod_download
@@ -70,6 +70,7 @@ RUN cd ${PLAN_DIR} && go get github.com/minio/sha256-simd@v1.0.0
 RUN cd ${PLAN_DIR} && go get github.com/prometheus/client_golang/prometheus@v1.13.0
 RUN cd ${PLAN_DIR} && go mod tidy
 RUN cd ${PLAN_DIR} && grep -n . go.???
+RUN go version
 '''
 
     pre_mod_download = '''
