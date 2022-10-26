@@ -36,6 +36,7 @@ interface CombinationFile {
 
 interface RunDefinition {
     Id: string;
+    transport: string,
     test_params?: { [key: string]: (string | number) };
     groups: RunInstanceDefintion[]
 }
@@ -99,8 +100,8 @@ function markdownTable(table: string[][]): string {
 
 function versionString(instance: InstanceDefinition): string {
     for ( let k of ['Version', 'Selector', 'Id'] ) {
-        console.log('looking for version as',k);
-        console.log(instance,instance[k]);
+        // console.log('looking for version as',k);
+        // console.log(instance,instance[k]);
         if (instance[k]) {
             return instance[k] as string;
         }
@@ -235,6 +236,7 @@ const combinations = (versions: InstanceDefinition[]): RunDefinition[] => {
                 }
                 const run: RunDefinition = {
                     Id: `${p1.Id} x ${p2.Id} : ${transport}`,
+                    transport: transport,
                     groups: [
                         {
                             Id: p1.Id,
