@@ -36,6 +36,7 @@ interface CombinationFile {
 
 interface RunDefinition {
     Id: string;
+    transport: string,
     test_params?: { [key: string]: (string | number) };
     groups: RunInstanceDefintion[]
 }
@@ -235,6 +236,7 @@ const combinations = (versions: InstanceDefinition[]): RunDefinition[] => {
                 }
                 const run: RunDefinition = {
                     Id: `${p1.Id} x ${p2.Id} : ${transport}`,
+                    transport: transport,
                     groups: [
                         {
                             Id: p1.Id,
