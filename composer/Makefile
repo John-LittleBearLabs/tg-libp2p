@@ -1,7 +1,7 @@
 all: ./demo/results.csv ./demo/results.html
 
 # combine versions into a list of combinations + the list of build targets
-./demo/combinations.toml: ./index.ts ./demo/rust.toml ./demo/go.toml
+./demo/combinations.toml: ./index.ts ./demo/rust.toml ./demo/go.toml ./node_modules/.bin/ts-node
 	./node_modules/.bin/ts-node index.ts combine ./demo/combinations.toml ./demo/rust.toml ./demo/go.toml
 
 #We don't want to assume no one else is doing something similar elsewhere on the same machine, nor do we want to assume your TMPDIR is /tmp. Using != for portability between makes.
@@ -13,16 +13,18 @@ $(OURTMP)/builds-artifacts.toml: ./demo/combinations.toml demo/composition-inter
 	make 'OURTMP=$(OURTMP)' build-all
 
 # extract the artifacts into a resource files
-./demo/artifacts.toml: ./index.ts $(OURTMP)/builds-artifacts.toml
+./demo/artifacts.toml: ./index.ts $(OURTMP)/builds-artifacts.toml ./node_modules/.bin/ts-node
 	./node_modules/.bin/ts-node index.ts extract-artifacts ./demo/artifacts.toml $(OURTMP)/builds-artifacts.toml
 
 # call all the runs
 ./demo/results.csv: ./index.ts ./demo/composition-interop-runner.toml ./demo/artifacts.toml ./demo/combinations.toml
 	make 'OURTMP=$(OURTMP)' run-all
 
-./demo/results.html: ./index.ts ./demo/results.csv
+./demo/results.html: ./index.ts ./demo/results.csv ./node_modules/.bin/ts-node
 	./node_modules/.bin/ts-node index.ts export-results ./demo/results.csv ./demo/results.html
 
+./node_modules/.bin/ts-node :
+	npm install
 
 build-all:
 	rm -rf $(OURTMP)/demo/

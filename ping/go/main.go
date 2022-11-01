@@ -117,6 +117,7 @@ func runPing(runenv *runtime.RunEnv, initCtx *run.InitContext) error {
 	case "quic":
 		listenPattern = "/ip4/%s/udp/0/quic"
 	}
+	runenv.RecordMessage("my listen pattern: %v", listenPattern)
 	// ☎️  Let's construct the libp2p node.
 	listenAddr := fmt.Sprintf(listenPattern, ip)
 	host, err := compat.NewLibp2(ctx,
