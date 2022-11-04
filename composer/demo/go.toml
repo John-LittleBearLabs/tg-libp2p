@@ -24,6 +24,16 @@ Implementation = "go"
 Selector = 'v0.22'
 SupportedTransports = ["tcp", "quic"]
 
+[[groups]]
+Id = "go-ckousik"
+GoVersion = '1.18'
+Modfile = "go.ckousik.mod"
+Implementation = "go"
+Repository = 'https://github.com/ckousik/go-libp2p.git'
+Branch = 'ckousik/webrtc'
+Selector = 'ckousik'
+SupportedTransports = ["tcp", "quic", "webrtc"]
+
 # [[groups]]
 # Id = "go-v0.21"
 # GoVersion = '1.18'
